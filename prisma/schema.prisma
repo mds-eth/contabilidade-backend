@@ -1,0 +1,23 @@
+datasource db {
+    provider = "sqlite"
+    url      = "file:../contabilidade_db.db"
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model produtos {
+    id           String   @id @default(uuid())
+    nome         String
+    preco        Float
+    estoque      Int
+    data_criacao DateTime @default(now())
+}
+
+model clientes {
+    id           String   @id @default(uuid())
+    nome         String
+    email        String   @unique
+    data_criacao DateTime @default(now())
+}
