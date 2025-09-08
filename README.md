@@ -85,27 +85,34 @@ Construir uma API em Node.js puro (http) ou qualquer biblioteca HTTP (Express, F
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/mds-eth/contabilidade-backend
 
-cd seu-repositorio
+cd contabilidade-backend
 
 ```
 
-### 2. Instalar dependências
+### 2. Criar .env na raiz do projeto
+
+```bash
+crie um arquivo .env na raiz do projeto e defina pelo menos a env "PORT"
+
+```
+
+### 3. Instalar dependências
 
 ```bash
 npm install
 
 ```
 
-### 3. Criar o banco e rodar as migrations
+### 4. Criar o banco e rodar as migrations
 
 ```bash
 npx prisma migrate dev --name init
 
 ```
 
-### 4. Rodar o projeto
+### 5. Rodar o projeto
 
 ```bash
 npm run dev
